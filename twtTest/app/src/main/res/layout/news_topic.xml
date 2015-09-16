@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".MainActivity" >
+
+    <com.xiepeng.twttest.News.RefreshLayout
+        android:id="@+id/topic_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/news_topic_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#DDD"
+            android:dividerHeight="1dp">
+        </ListView>
+    </com.xiepeng.twttest.News.RefreshLayout>
+
+</LinearLayout>

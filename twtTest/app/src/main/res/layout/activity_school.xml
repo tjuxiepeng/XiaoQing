@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#DDD">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666"
+            android:text="学院:"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"/>
+
+        <RelativeLayout
+            android:id="@+id/activity_choose"
+            android:background="@drawable/shape"
+            android:layout_marginLeft="20dp"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/activity_school_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#444"
+                android:text="机械学院"/>
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/activity_school_choice"
+                android:layout_marginLeft="15dip"
+                android:background="@drawable/icon_arrow_down"
+                />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.xiepeng.twttest.News.RefreshLayout
+        android:id="@+id/school_news_refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/news_school_listview_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#DDD"
+            android:dividerHeight="1dp">
+        </ListView>
+    </com.xiepeng.twttest.News.RefreshLayout>
+
+
+
+</LinearLayout>

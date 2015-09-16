@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/activity_school_news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="标题"
+        android:textColor="#000"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/activity_school_news_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_school_news_title"
+        android:layout_alignParentRight="true"
+        android:text="时间"
+        android:textColor="#000"
+        android:textSize="10sp"/>
+
+    <LinearLayout
+        android:id="@+id/blank"
+        android:layout_toLeftOf="@id/activity_school_news_time"
+        android:layout_width="15dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_school_news_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/blank"
+        android:layout_below="@id/activity_school_news_title"
+        android:textColor="#000"
+        android:text="地点"
+        android:textSize="10sp"/>
+
+</RelativeLayout>
