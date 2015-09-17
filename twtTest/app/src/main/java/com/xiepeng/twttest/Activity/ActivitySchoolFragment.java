@@ -214,10 +214,6 @@ public class ActivitySchoolFragment extends Fragment {
         JSONObject object = new JSONObject(arg0);
 
         if(index == 1){
-//            ArrayList<ActivityCollege_News> newsList2;
-//            newsList2 = gson.fromJson(object.getString("rsm"),
-//                    listType);
-
             newsList = gson.fromJson(object.getString("rsm"),
                     listType);
 
@@ -228,12 +224,16 @@ public class ActivitySchoolFragment extends Fragment {
             ArrayList<ActivityCollege_News> newsList1 = gson.fromJson(object.getString("rsm"),
                     listType);
 
-            newsList.addAll(newsList1);
+            if(newsList1.isEmpty()){
+                Toast.makeText(getActivity(), "没有更多内容", Toast.LENGTH_SHORT)
+                        .show();
+            } else {
+                newsList.addAll(newsList1);
 
-            adapter.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();
 
-            myRefreshListView.setRefreshing(false);
-
+                myRefreshListView.setRefreshing(false);
+            }
         }
     }
 

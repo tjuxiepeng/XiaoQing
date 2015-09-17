@@ -7,23 +7,34 @@
 
     <!-- The main content view -->
 
-    <FrameLayout
-        android:id="@+id/content_frame"
+    <LinearLayout
+        android:id="@+id/main_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </FrameLayout>
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+
+            <android.support.v7.widget.Toolbar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:id="@+id/toolbar_actionbar"
+                android:background="@color/colorMain"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize" />
+
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </FrameLayout>
+
+    </LinearLayout>
 
     <!-- The navigation view -->
 
-    <ListView
-        android:id="@+id/left_drawer"
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="#007799"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="8dp" >
-    </ListView>
+    <include layout="@layout/navdrawer" />
 
 </android.support.v4.widget.DrawerLayout>

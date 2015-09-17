@@ -11,7 +11,7 @@ import android.view.Window;
  */
 public class WelcomeActivity extends Activity {
     protected boolean _active = true;
-    protected int _splashTime = 5000;
+    protected int _splashTime = 2000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

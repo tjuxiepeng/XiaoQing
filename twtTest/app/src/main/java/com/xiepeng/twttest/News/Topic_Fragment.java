@@ -155,23 +155,18 @@ public class Topic_Fragment extends Fragment {
             listView.setAdapter(adapter);
         }
         else{
-//            Type listType1 = new TypeToken<String>() {
-//            }.getType();
-//            String moreTag = (String)gson.fromJson(object.getString("errno"),listType1);
-//            if(moreTag == "0"){
-//                Toast.makeText(getActivity(), "没有更多内容", Toast.LENGTH_SHORT)
-//                        .show();
-//            }
-//
             ArrayList<School_News> newsList1 = gson.fromJson(object.getString("rsm"),
                     listType);
+            if(newsList1.isEmpty()){
+                Toast.makeText(getActivity(), "没有更多内容", Toast.LENGTH_SHORT)
+                        .show();
+            }else {
+                newsList.addAll(newsList1);
 
-            newsList.addAll(newsList1);
+                adapter.notifyDataSetChanged();
 
-            adapter.notifyDataSetChanged();
-
-            myRefreshListView.setRefreshing(false);
-
+                myRefreshListView.setRefreshing(false);
+            }
         }
     }
 
